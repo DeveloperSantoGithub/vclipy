@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import youtubeApi from '../Apis/youtubeApi';
 import SearchBar from './SearchBar';
 
 class App extends Component {
 	state = { videos: [] };
 
 	handleSearchSubmit = (keyword) => {
-		console.log(keyword);
+		youtubeApi(keyword);
 	};
 
 	render() {
