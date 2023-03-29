@@ -5,8 +5,10 @@ import SearchBar from './SearchBar';
 class App extends Component {
 	state = { videos: [] };
 
-	handleSearchSubmit = (keyword) => {
-		youtubeApi(keyword);
+	handleSearchSubmit = async (keyword) => {
+		const result = await youtubeApi(keyword);
+
+		this.setState({ videos: result });
 	};
 
 	render() {
