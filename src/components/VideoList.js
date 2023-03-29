@@ -1,9 +1,15 @@
+import VideoItem from './VideoItem';
+
 function VideoList({ videos }) {
 	const renderedVideos = videos.map((video) => {
-		return <div>{video.snippet.title}</div>;
+		return <VideoItem key={video.id} video={video} />;
 	});
 
-	return <div>{renderedVideos}</div>;
+	return (
+		<div className="flex flex-col justify-center items-center ">
+			{renderedVideos}
+		</div>
+	);
 }
 
 export default VideoList;

@@ -13,7 +13,8 @@ const youtubeApi = async (keyword) => {
 		},
 	);
 
-	return response.data.results;
+	console.log(response);
+	return response.data.items;
 };
 
 export default youtubeApi;
