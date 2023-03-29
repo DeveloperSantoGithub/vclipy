@@ -6,7 +6,7 @@ const youtubeApi = async (keyword) => {
 		{
 			params: {
 				part: 'snippet',
-				maxResults: 5,
+				maxResults: 10,
 				key: process.env.REACT_APP_YOUTUBE_API_KEY,
 				q: keyword,
 			},

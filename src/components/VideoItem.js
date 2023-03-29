@@ -1,9 +1,9 @@
 function VideoItem({ video }) {
 	return (
-		<div className="flex w-10/12 items-center gap-5 my-2 border-b-2">
-			<div className="w-64 h-32 rounded-md  ">
+		<div className="flex w-10/12 items-center gap-5 my-2 border-b-2 pb-4">
+			<div className="">
 				<img
-					className=" object-cover w-80 h-32 "
+					className="rounded-md max-w-full max-h-full object-cover"
 					src={video.snippet.thumbnails.medium.url}
 					alt="thumbnials"
 				/>
