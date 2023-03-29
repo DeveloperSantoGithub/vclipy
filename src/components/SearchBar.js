@@ -8,6 +8,12 @@ class SearchBar extends React.Component {
 		this.setState({ keyword: event.target.value });
 	};
 
+	handleSubmit = (event) => {
+		event.preventDefault();
+
+		this.props.onSubmit(this.state.keyword);
+	};
+
 	render() {
 		return (
 			<div className="bg-gray-300 flex flex-row items-center justify-between w-full h-14 px-3">
@@ -16,7 +22,7 @@ class SearchBar extends React.Component {
 				</div>
 
 				<from
-					onSubmit={''}
+					onSubmit={this.handleSubmit}
 					className="bg-white rounded-3xl w-5/12 shadow-sm hover:shadow-md"
 				>
 					<div className="flex items-center justify-center">
