@@ -27,13 +27,14 @@ class SearchBar extends React.Component {
 				>
 					<div className="flex items-center justify-center">
 						<input
+							type="text"
 							value={this.state.keyword}
 							onChange={this.handleChange}
 							className="pl-4 text-xl  rounded-l-3xl outline-none py-2 w-11/12"
 							placeholder="Search"
 						/>
 
-						<button className=" text-2xl p-2">
+						<button className="text-2xl p-2">
 							<BiSearch />
 						</button>
 					</div>
