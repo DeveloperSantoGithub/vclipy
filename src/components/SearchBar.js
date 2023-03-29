@@ -30,7 +30,7 @@ class SearchBar extends React.Component {
 							type="text"
 							value={this.state.keyword}
 							onChange={this.handleChange}
-							className="pl-4 text-xl  rounded-l-3xl outline-none py-2 w-11/12"
+							className="pl-4 text-xl  rounded-l-3xl outline-none py-1 w-11/12"
 							placeholder="Search"
 						/>
 

@@ -5,7 +5,7 @@ export default class App extends Component {
 	state = { videos: [] };
 
 	onSubmit = (keyword) => {
-		//
+		console.log(keyword);
 	};
 
 	render() {
