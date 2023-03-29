@@ -1,4 +1,5 @@
 import React from 'react';
+import { BiSearch } from 'react-icons/bi';
 
 class SearchBar extends React.Component {
 	render() {
@@ -7,7 +8,9 @@ class SearchBar extends React.Component {
 				<from>
 					<div>
 						<input />
-						<button></button>
+						<button>
+							<BiSearch />
+						</button>
 					</div>
 				</from>
 			</div>
