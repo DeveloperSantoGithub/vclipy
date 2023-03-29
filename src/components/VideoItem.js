@@ -9,10 +9,12 @@ function VideoItem({ video }) {
 				/>
 			</div>
 
-			<div>
+			<div className="flex flex-col justify-between h-36">
 				<div>{video.snippet.title}</div>
 				<div>{video.snippet.channelTitle}</div>
-				<div>{video.snippet.description}</div>
+				<div className="bg-gray-200 from-transparent p-2 rounded-md border-black ">
+					{video.snippet.description}
+				</div>
 			</div>
 		</div>
 	);
