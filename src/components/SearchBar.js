@@ -12,6 +12,7 @@ class SearchBar extends React.Component {
 		event.preventDefault();
 
 		this.props.onSubmit(this.state.keyword);
+		this.setState({ keyword: '' });
 	};
 
 	render() {
@@ -21,7 +22,7 @@ class SearchBar extends React.Component {
 					<h2 className="font-semibold">Vclipy</h2>
 				</div>
 
-				<from
+				<form
 					onSubmit={this.handleFormSubmit}
 					className="bg-white rounded-3xl w-5/12 shadow-sm hover:shadow-md"
 				>
@@ -38,7 +39,7 @@ class SearchBar extends React.Component {
 							<BiSearch />
 						</button>
 					</div>
-				</from>
+				</form>
 
 				<div>
 					<h4>User</h4>
