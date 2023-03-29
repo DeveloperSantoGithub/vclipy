@@ -12,7 +12,6 @@ class App extends Component {
 	};
 
 	render() {
-		console.log(this.state.videos);
 		return (
 			<div className="flex items-center justify-center">
 				<SearchBar onSubmit={this.handleSearchSubmit} />
