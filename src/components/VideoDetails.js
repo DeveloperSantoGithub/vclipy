@@ -1,5 +1,5 @@
-function VideoDetails() {
-	return <div>VideoDetails</div>;
+function VideoDetails({ video }) {
+	return <div>{video.snippet.title}</div>;
 }
 
 export default VideoDetails;
