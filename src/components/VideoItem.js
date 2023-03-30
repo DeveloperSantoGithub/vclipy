@@ -6,11 +6,11 @@ function VideoItem({ video, onVideoSelect }) {
 			</div>
 
 			<div className="video-info">
-				<h4 className="title">
-					{video.snippet.title}
+				<div className="title">
+					<h4 className="video-title">{video.snippet.title}</h4>
 
 					<h5 className="channel-title">{video.snippet.channelTitle}</h5>
-				</h4>
+				</div>
 
 				<p className="description">{video.snippet.description}</p>
 			</div>
