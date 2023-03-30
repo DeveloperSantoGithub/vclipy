@@ -34,7 +34,7 @@ class SearchBar extends React.Component {
 							placeholder="Search"
 						/>
 
-						<button className="text-2xl p-2">
+						<button>
 							<BiSearch />
 						</button>
 					</div>
