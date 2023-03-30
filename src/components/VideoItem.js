@@ -2,7 +2,7 @@ function VideoItem({ video, onVideoSelect }) {
 	return (
 		<div
 			onClick={() => onVideoSelect(video)}
-			className="flex w-10/12 items-center gap-5 my-2 border-b-2 pb-4 cursor-pointer"
+			className="flex w-9/12 items-center gap-5 my-2 border-b-2 pb-4 cursor-pointer"
 		>
 			<div>
 				<img
