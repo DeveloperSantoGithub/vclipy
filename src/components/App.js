@@ -32,6 +32,7 @@ class App extends Component {
 					<div>
 						<VideoDetails video={this.state.selectedVideo} />
 					</div>
+
 					<div>
 						<VideoList
 							onVideoSelect={this.onVideoSelect}
