@@ -1,5 +1,5 @@
 .video-item-container {
-	width: 30rem;
+	width: 28rem;
 	display: flex;
 	align-items: center;
 
@@ -29,7 +29,7 @@
 	.video-info {
 		display: flex;
 		flex-direction: column;
-		gap: 0.8rem;
+		gap: 1rem;
 
 		.title {
 			.video-title {
@@ -41,9 +41,6 @@
 				font-size: 0.8rem;
 				color: gray;
 			}
-		}
-		.description {
-			font-size: 0.7rem;
 		}
 	}
 }

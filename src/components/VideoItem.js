@@ -11,8 +11,6 @@ function VideoItem({ video, onVideoSelect }) {
 
 					<h5 className="channel-title">{video.snippet.channelTitle}</h5>
 				</div>
-
-				<p className="description">{video.snippet.description}</p>
 			</div>
 		</div>
 	);

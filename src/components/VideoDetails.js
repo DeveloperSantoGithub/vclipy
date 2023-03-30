@@ -6,7 +6,7 @@ function VideoDetails({ video }) {
 	const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
 	return (
-		<div className=" flex flex-col items-center justify-center">
+		<div className="">
 			<div className="w-9/12 h-11/12 mt-4">
 				<iframe
 					className=" shadow-md w-full h-full lg:aspect-video md:aspect-video sm:aspect-auto rounded-md"
