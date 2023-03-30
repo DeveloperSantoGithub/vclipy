@@ -4,10 +4,10 @@ function VideoDetails({ video }) {
 	}
 
 	return (
-		<div className="w-10/12">
-			<div className="flex flex-col justify-between gap-4">
-				<h4>{video.snippet.title}</h4>
-				<p>{video.snippet.description}</p>
+		<div className=" flex items-center justify-center">
+			<div className="flex flex-col justify-between gap-4 w-10/12 p-3 my-2 border shadow-md rounded-md">
+				<h4 className="font-bold text-md">{video.snippet.title}</h4>
+				<p className="text-sm">{video.snippet.description}</p>
 			</div>
 		</div>
 	);
