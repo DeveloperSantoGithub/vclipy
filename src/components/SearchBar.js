@@ -17,9 +17,9 @@ class SearchBar extends React.Component {
 
 	render() {
 		return (
-			<div className="bg-gray-300 flex flex-row items-center justify-between w-full h-14 px-3">
-				<div>
-					<h2 className="font-semibold">Vclipy</h2>
+			<div className="navbar">
+				<div className="logo">
+					<h2>Vclipy</h2>
 				</div>
 
 				<form
