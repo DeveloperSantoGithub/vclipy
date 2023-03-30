@@ -17,8 +17,8 @@ function VideoDetails({ video }) {
 			</div>
 
 			<div className="video-info-card">
-				<h4 className="font-bold text-md">{video.snippet.title}</h4>
-				<p className="text-sm">{video.snippet.description}</p>
+				<h4>{video.snippet.title}</h4>
+				<p>{video.snippet.description}</p>
 			</div>
 		</div>
 	);
