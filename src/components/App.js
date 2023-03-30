@@ -4,12 +4,16 @@ import SearchBar from './SearchBar';
 import VideoList from './VideoList';
 
 class App extends Component {
-	state = { videos: [] };
+	state = { videos: [], selectedVideo: null };
 
 	handleSearchSubmit = async (keyword) => {
 		const result = await youtubeApi(keyword);
 
 		this.setState({ videos: result });
+	};
+
+	onVideoSelect = (video) => {
+		console.log(video);
 	};
 
 	render() {
@@ -19,7 +23,10 @@ class App extends Component {
 					<SearchBar onSubmit={this.handleSearchSubmit} />
 				</div>
 				<div>
-					<VideoList videos={this.state.videos} />
+					<VideoList
+						onVideoSelect={this.onVideoSelect}
+						videos={this.state.videos}
+					/>
 				</div>
 			</>
 		);
