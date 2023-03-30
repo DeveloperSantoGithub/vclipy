@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import youtubeApi from '../Apis/youtubeApi';
 import SearchBar from './SearchBar';
+import VideoDetails from './VideoDetails';
 import VideoList from './VideoList';
 
 class App extends Component {
@@ -22,6 +23,9 @@ class App extends Component {
 				<div className="flex items-center justify-center">
 					<SearchBar onSubmit={this.handleSearchSubmit} />
 				</div>
+
+				<VideoDetails />
+
 				<div>
 					<VideoList
 						onVideoSelect={this.onVideoSelect}
