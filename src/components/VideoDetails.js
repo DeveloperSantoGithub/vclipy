@@ -12,6 +12,7 @@ function VideoDetails({ video }) {
 					className=" shadow-md w-full h-full lg:aspect-video md:aspect-video sm:aspect-auto rounded-md"
 					src={videoSrc}
 					title={video.snippet.title}
+					allowfullscreen
 				/>
 			</div>
 

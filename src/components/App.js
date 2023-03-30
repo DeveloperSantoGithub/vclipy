@@ -7,10 +7,14 @@ import VideoList from './VideoList';
 class App extends Component {
 	state = { videos: [], selectedVideo: null };
 
+	componentDidMount() {
+		this.handleSearchSubmit('DeveloperSanto');
+	}
+
 	handleSearchSubmit = async (keyword) => {
 		const result = await youtubeApi(keyword);
 
-		this.setState({ videos: result });
+		this.setState({ videos: result, selectedVideo: result[0] });
 	};
 
 	onVideoSelect = (video) => {
