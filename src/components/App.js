@@ -29,11 +29,11 @@ class App extends Component {
 				</div>
 
 				<div className="main-display-comtainer">
-					<div>
+					<div className="video-details">
 						<VideoDetails video={this.state.selectedVideo} />
 					</div>
 
-					<div>
+					<div className="video-list">
 						<VideoList
 							onVideoSelect={this.onVideoSelect}
 							videos={this.state.videos}
