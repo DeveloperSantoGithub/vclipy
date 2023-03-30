@@ -6,6 +6,10 @@
 	box-sizing: border-box;
 }
 
+body {
+	background: radial-gradient(ellipse at bottom, #230469d7 25%, #0e002b 100%);
+}
+
 @import './Navbar';
 @import './VideoItem';
 @import './VideoList';
