@@ -8,7 +8,7 @@ class App extends Component {
 	state = { videos: [], selectedVideo: null };
 
 	componentDidMount() {
-		this.handleSearchSubmit('Ollyo');
+		this.handleSearchSubmit('javascript');
 	}
 
 	handleSearchSubmit = async (keyword) => {
