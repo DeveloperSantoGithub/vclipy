@@ -24,13 +24,16 @@ class App extends Component {
 					<SearchBar onSubmit={this.handleSearchSubmit} />
 				</div>
 
-				<VideoDetails video={this.state.selectedVideo} />
-
 				<div>
-					<VideoList
-						onVideoSelect={this.onVideoSelect}
-						videos={this.state.videos}
-					/>
+					<div>
+						<VideoDetails video={this.state.selectedVideo} />
+					</div>
+					<div>
+						<VideoList
+							onVideoSelect={this.onVideoSelect}
+							videos={this.state.videos}
+						/>
+					</div>
 				</div>
 			</>
 		);
