@@ -28,7 +28,7 @@ class App extends Component {
 					<SearchBar onSubmit={this.handleSearchSubmit} />
 				</div>
 
-				<div>
+				<div className="main-display-comtainer">
 					<div>
 						<VideoDetails video={this.state.selectedVideo} />
 					</div>
