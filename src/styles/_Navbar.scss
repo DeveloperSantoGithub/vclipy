@@ -23,4 +23,11 @@
 		font-size: 1.5rem;
 		letter-spacing: 0.2rem;
 	}
+
+	.search-form {
+		flex-direction: column;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }

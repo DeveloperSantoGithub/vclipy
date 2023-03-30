@@ -25,7 +25,7 @@ class SearchBar extends React.Component {
 				</div>
 
 				<form onSubmit={this.handleFormSubmit} className="search-form">
-					<div className="flex items-center justify-center">
+					<div className="input-section">
 						<input
 							type="text"
 							value={this.state.keyword}
