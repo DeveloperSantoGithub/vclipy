@@ -13,7 +13,7 @@ class App extends Component {
 	};
 
 	onVideoSelect = (video) => {
-		console.log(video);
+		this.setState({ selectedVideo: video });
 	};
 
 	render() {
