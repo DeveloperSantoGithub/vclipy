@@ -19,13 +19,12 @@ class SearchBar extends React.Component {
 		return (
 			<div className="navbar">
 				<div className="logo">
-					<h2>Vclipy</h2>
+					<h2>
+						<span>V</span>clipy
+					</h2>
 				</div>
 
-				<form
-					onSubmit={this.handleFormSubmit}
-					className="bg-white rounded-3xl w-5/12 shadow-sm hover:shadow-md"
-				>
+				<form onSubmit={this.handleFormSubmit} className="search-form">
 					<div className="flex items-center justify-center">
 						<input
 							type="text"
