@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
 
 		if (this.state.dark) {
 			document.body.style.backgroundColor = 'white';
-		} else {
+		} else if (this.state.dark === false) {
 			document.body.style.backgroundColor = '#230469d7';
 		}
 	};
