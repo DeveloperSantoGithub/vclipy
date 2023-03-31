@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import youtubeApi from '../Apis/youtubeApi';
+import CopyRight from './CopyRight';
 import SearchBar from './SearchBar';
 import VideoDetails from './VideoDetails';
 import VideoList from './VideoList';
@@ -40,6 +41,7 @@ class App extends Component {
 						/>
 					</div>
 				</div>
+				<CopyRight />
 			</>
 		);
 	}
