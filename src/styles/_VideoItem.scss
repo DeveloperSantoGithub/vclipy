@@ -1,5 +1,5 @@
 .video-item-container {
-	width: 28rem;
+	width: 100%;
 	display: flex;
 	align-items: center;
 
@@ -47,5 +47,9 @@
 	transition: all ease 0.3s;
 	&:hover {
 		box-shadow: 0 4px 6px -1px #7c9fff1a, 0 2px 4px -2px #7c9fff1a;
+	}
+
+	@media (min-width: 90em) {
+		width: 28rem;
 	}
 }
