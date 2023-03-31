@@ -1,17 +1,21 @@
 .main-display-comtainer {
 	display: grid;
 	column-gap: 1.5rem;
-	// grid-auto-columns: 1fr;
 	grid-template-areas:
 		'one'
 		'two';
+
+	// grid-auto-columns: 1fr;
+	// grid-template-areas:
+	// 	'one'
+	// 	'two';
 
 	// .video-details {
 	// 	grid-column: span 2;
 	// }
 
 	@media (min-width: 90em) {
-		grid-template-areas: 'one one two';
+		grid-template-columns: 4fr 1fr;
 	}
 }
 
