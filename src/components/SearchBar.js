@@ -3,7 +3,7 @@ import { BiSearch } from 'react-icons/bi';
 import { VscColorMode } from 'react-icons/vsc';
 
 class SearchBar extends React.Component {
-	state = { keyword: '', dark: true };
+	state = { keyword: '', dark: false };
 
 	handleChange = (event) => {
 		this.setState({ keyword: event.target.value });
