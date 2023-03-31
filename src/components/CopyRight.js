@@ -7,7 +7,7 @@ function CopyRight() {
 		<div className="copy-right-tags">
 			<div className="copy-rights">
 				<h2>
-					<CgCopyright /> Developed by:
+					<CgCopyright className="i-copy" />
 					<a
 						href="https://developersanto.netlify.app/"
 						target="_blank"

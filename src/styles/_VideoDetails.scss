@@ -21,6 +21,8 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
+
+				box-shadow: 0 4px 6px -1px #e2e2e21a, 0 2px 4px -2px #e2e2e21a;
 			}
 		}
 
@@ -42,6 +44,10 @@
 
 			h4 {
 				font-size: 1.6rem;
+			}
+			transition: all ease 0.3s;
+			&:hover {
+				box-shadow: 0 4px 6px -1px #7c9fff1a, 0 2px 4px -2px #7c9fff1a;
 			}
 		}
 	}

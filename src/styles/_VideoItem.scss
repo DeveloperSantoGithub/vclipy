@@ -43,4 +43,9 @@
 			}
 		}
 	}
+
+	transition: all ease 0.3s;
+	&:hover {
+		box-shadow: 0 4px 6px -1px #7c9fff1a, 0 2px 4px -2px #7c9fff1a;
+	}
 }

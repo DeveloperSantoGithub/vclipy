@@ -8,20 +8,32 @@
 	justify-content: flex-end;
 
 	.copy-rights {
-		background: #eaf4ff;
+		background: rgba(0, 0, 0, 0.8);
+		-webkit-backdrop-filter: saturate(180%) blur(10px);
+		backdrop-filter: saturate(180%) blur(10px);
+		box-shadow: 2px 2px 30px #00000036;
 
 		border-radius: 1rem;
 
 		font-family: 'Roboto', sans-serif;
 		font-size: 0.7rem;
 		padding: 0.5rem 1rem;
+		color: aliceblue;
 
 		transition: all 0.3s ease;
 
 		h2 {
+			display: flex;
+			align-items: center;
+
+			.i-copy {
+				font-size: 1.2rem;
+				margin-right: 2px;
+				padding: 0;
+			}
 			a {
 				text-decoration: none;
-				color: #0e0e0e;
+				color: aliceblue;
 
 				span {
 					color: #575aff;
@@ -32,14 +44,15 @@
 					color: #575aff;
 
 					span {
-						color: #0e0e0e;
+						color: aliceblue;
 					}
 				}
 			}
 		}
 
+		transition: all ease 0.3s;
 		&:hover {
-			box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
+			box-shadow: 0 4px 6px -1px #7c9fff1a, 0 2px 4px -2px #7c9fff1a;
 		}
 	}
 
@@ -68,22 +81,18 @@
 
 			text-decoration: none;
 
-			background: #eaf4ff;
+			background: rgba(0, 0, 0, 0.8);
 			padding: 0.5rem;
 
 			border-radius: 50%;
 			transition: all 0.3s ease;
-
-			i {
-				color: #0e0e0e;
-			}
+			color: #ffffff;
 
 			&:hover {
-				background: #0e0e0e;
+				background: aliceblue;
 
-				i {
-					color: #eaf4ff;
-				}
+				color: #0e0e0e;
+				font-size: 1.5rem;
 
 				box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
 			}

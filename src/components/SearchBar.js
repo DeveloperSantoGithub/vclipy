@@ -1,5 +1,6 @@
 import React from 'react';
 import { BiSearch } from 'react-icons/bi';
+import { VscColorMode } from 'react-icons/vsc';
 
 class SearchBar extends React.Component {
 	state = { keyword: '' };
@@ -40,7 +41,9 @@ class SearchBar extends React.Component {
 				</form>
 
 				<div>
-					<h4>User</h4>
+					<h2>
+						<VscColorMode />
+					</h2>
 				</div>
 			</div>
 		);
