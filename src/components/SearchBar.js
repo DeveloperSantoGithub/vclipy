@@ -11,7 +11,6 @@ class SearchBar extends React.Component {
 
 	handleDarkMode = (event) => {
 		this.setState({ dark: !this.state.dark });
-		console.log(this.state.dark);
 
 		if (this.state.dark) {
 			document.body.style.backgroundColor = 'white';
