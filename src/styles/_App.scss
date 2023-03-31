@@ -1,10 +1,15 @@
 .main-display-comtainer {
 	display: grid;
-	grid-template-columns: 3fr 1fr;
-
 	column-gap: 1rem;
+	grid-template-areas:
+		'one'
+		'two';
 
 	// .video-details {
 	// 	grid-column: span 3;
 	// }
+
+	@media (min-width: 90em) {
+		grid-template-areas: 'one one two';
+	}
 }
