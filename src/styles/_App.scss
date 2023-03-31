@@ -1,15 +1,23 @@
 .main-display-comtainer {
 	display: grid;
-	column-gap: 1rem;
+	column-gap: 1.5rem;
+	// grid-auto-columns: 1fr;
 	grid-template-areas:
 		'one'
 		'two';
 
 	// .video-details {
-	// 	grid-column: span 3;
+	// 	grid-column: span 2;
 	// }
 
 	@media (min-width: 90em) {
 		grid-template-areas: 'one one two';
 	}
+}
+
+.main-display-comtainer:nth-child(1) {
+	grid-area: one;
+}
+.main-display-comtainer:nth-child(2) {
+	grid-area: two;
 }

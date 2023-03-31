@@ -11,11 +11,7 @@ function VideoList({ videos, onVideoSelect }) {
 		);
 	});
 
-	return (
-		<div className="flex flex-col justify-center items-center ">
-			{renderedVideos}
-		</div>
-	);
+	return <div className="video-list-container">{renderedVideos}</div>;
 }
 
 export default VideoList;

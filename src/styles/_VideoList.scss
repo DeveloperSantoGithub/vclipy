@@ -1,0 +1,9 @@
+.video-list-container {
+	background: #fdfafa;
+	padding: 0;
+	margin: 1.5rem;
+
+	display: grid;
+	grid-template-rows: 1fr;
+	row-gap: 1rem;
+}

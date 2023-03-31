@@ -11,9 +11,9 @@ function VideoDetails({ video }) {
 				<iframe
 					src={videoSrc}
 					title={video.snippet.title}
-					frameborder="0"
+					frameBorder="0"
 					allow="accelerometer; autoplay; encrypted-media; gyroscope;"
-					allowfullscreen
+					allowFullScreen
 				/>
 			</div>
 
