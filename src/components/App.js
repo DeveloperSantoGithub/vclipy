@@ -9,7 +9,7 @@ class App extends Component {
 	state = { videos: [], selectedVideo: null };
 
 	componentDidMount() {
-		this.handleSearchSubmit('javascript');
+		this.handleSearchSubmit('Figma');
 	}
 
 	handleSearchSubmit = async (keyword) => {
