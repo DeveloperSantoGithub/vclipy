@@ -25,7 +25,7 @@ class App extends Component {
 	render() {
 		return (
 			<>
-				<div className="flex items-center justify-center">
+				<div>
 					<SearchBar onSubmit={this.handleSearchSubmit} />
 				</div>
 
