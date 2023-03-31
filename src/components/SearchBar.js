@@ -3,10 +3,21 @@ import { BiSearch } from 'react-icons/bi';
 import { VscColorMode } from 'react-icons/vsc';
 
 class SearchBar extends React.Component {
-	state = { keyword: '' };
+	state = { keyword: '', dark: true };
 
 	handleChange = (event) => {
 		this.setState({ keyword: event.target.value });
+	};
+
+	handleDarkMode = (event) => {
+		this.setState({ dark: !this.state.dark });
+		console.log(this.state.dark);
+
+		if (this.state.dark) {
+			document.body.style.backgroundColor = 'white';
+		} else {
+			document.body.style.backgroundColor = '#230469d7';
+		}
 	};
 
 	handleFormSubmit = (event) => {
@@ -40,7 +51,7 @@ class SearchBar extends React.Component {
 					</div>
 				</form>
 
-				<div>
+				<div className="dark-mode" onClick={this.handleDarkMode}>
 					<h2>
 						<VscColorMode />
 					</h2>

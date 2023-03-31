@@ -9,6 +9,7 @@
 		display: grid;
 		grid-template-rows: 4fr 1fr;
 		row-gap: 1rem;
+		user-select: none;
 
 		.video-iframe-container {
 			position: relative;
