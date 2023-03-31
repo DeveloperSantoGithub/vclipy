@@ -1,4 +1,6 @@
+import { AiFillGithub } from 'react-icons/ai';
 import { CgCopyright } from 'react-icons/cg';
+import { RiLinkedinFill } from 'react-icons/ri';
 
 function CopyRight() {
 	return (
@@ -22,7 +24,7 @@ function CopyRight() {
 					target="_blank"
 					rel="noreferrer"
 				>
-					<i className="fas fa-brands fa-github"></i>
+					<AiFillGithub className="i-github" />
 				</a>
 				<a
 					className="linkedin"
@@ -30,7 +32,7 @@ function CopyRight() {
 					target="_blank"
 					rel="noreferrer"
 				>
-					<i className="fas fa-brands fa-linkedin-in"></i>
+					<RiLinkedinFill className="i-linkedin" />
 				</a>
 			</div>
 		</div>
