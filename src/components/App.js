@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import useVideos from '../Hooks/useVideos';
 import CopyRight from './CopyRight';
 import SearchBar from './SearchBar';
@@ -10,7 +10,9 @@ const App = () => {
 
 	const [videos, search] = useVideos('Figma');
 
-	// setSelectedVideo(result[0]);
+	useEffect(() => {
+		// setSelectedVideo(result[0]);
+	}, [videos]);
 
 	return (
 		<>
