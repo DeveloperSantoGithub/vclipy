@@ -1,49 +1,43 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import youtubeApi from '../Apis/youtubeApi';
 import CopyRight from './CopyRight';
 import SearchBar from './SearchBar';
 import VideoDetails from './VideoDetails';
 import VideoList from './VideoList';
 
-class App extends Component {
-	state = { videos: [], selectedVideo: null };
+const App = () => {
+	const [videos, setVideos] = useState([]);
+	const [selectedVideo, setSelectedVideo] = useState(null);
 
-	componentDidMount() {
-		this.handleSearchSubmit('Figma');
-	}
+	useEffect(() => {
+		handleSearchSubmit('Figma');
+	}, []);
 
-	handleSearchSubmit = async (keyword) => {
+	const handleSearchSubmit = async (keyword) => {
 		const result = await youtubeApi(keyword);
 
-		this.setState({ videos: result, selectedVideo: result[0] });
+		setVideos(result);
+		setSelectedVideo(result[0]);
 	};
 
-	onVideoSelect = (video) => {
-		this.setState({ selectedVideo: video });
-	};
+	return (
+		<>
+			<div>
+				<SearchBar onSubmit={handleSearchSubmit} />
+			</div>
 
-	render() {
-		return (
-			<>
-				<div>
-					<SearchBar onSubmit={this.handleSearchSubmit} />
+			<div className="main-display-comtainer">
+				<div className="video-details">
+					<VideoDetails video={selectedVideo} />
 				</div>
 
-				<div className="main-display-comtainer">
-					<div className="video-details">
-						<VideoDetails video={this.state.selectedVideo} />
-					</div>
-
-					<div className="video-list">
-						<VideoList
-							onVideoSelect={this.onVideoSelect}
-							videos={this.state.videos}
-						/>
-					</div>
+				<div className="video-list">
+					<VideoList onVideoSelect={setSelectedVideo} videos={videos} />
 				</div>
-				<CopyRight />
-			</>
-		);
-	}
-}
+			</div>
+			<CopyRight />
+		</>
+	);
+};
+
 export default App;

@@ -1,63 +1,62 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
 import { VscColorMode } from 'react-icons/vsc';
 
-class SearchBar extends React.Component {
-	state = { keyword: '', dark: false };
+const SearchBar = ({ onSubmit }) => {
+	const [keyword, setKeyword] = useState('');
+	const [dark, setDark] = useState(false);
 
-	handleChange = (event) => {
-		this.setState({ keyword: event.target.value });
+	const handleChange = (event) => {
+		setKeyword(event.target.value);
 	};
 
-	handleDarkMode = (event) => {
-		this.setState({ dark: !this.state.dark });
+	const handleDarkMode = (event) => {
+		setDark(!dark);
 
-		if (this.state.dark) {
+		if (dark) {
 			document.body.style.backgroundColor = 'white';
-		} else if (this.state.dark === false) {
+		} else if (dark === false) {
 			document.body.style.backgroundColor = '#230469d7';
 		}
 	};
 
-	handleFormSubmit = (event) => {
+	const handleFormSubmit = (event) => {
 		event.preventDefault();
 
-		this.props.onSubmit(this.state.keyword);
-		this.setState({ keyword: '' });
+		onSubmit(keyword);
+		setKeyword('');
 	};
 
-	render() {
-		return (
-			<div className="navbar">
-				<div className="logo">
-					<h2>
-						<span>V</span>clipy
-					</h2>
-				</div>
-
-				<form onSubmit={this.handleFormSubmit} className="search-form">
-					<div className="input-section">
-						<input
-							type="text"
-							value={this.state.keyword}
-							onChange={this.handleChange}
-							placeholder="Search"
-						/>
-
-						<button>
-							<BiSearch />
-						</button>
-					</div>
-				</form>
-
-				<div className="dark-mode" onClick={this.handleDarkMode}>
-					<h2>
-						<VscColorMode />
-					</h2>
-				</div>
+	return (
+		<div className="navbar">
+			<div className="logo">
+				<h2>
+					<span>V</span>clipy
+				</h2>
 			</div>
-		);
-	}
-}
+
+			<form onSubmit={handleFormSubmit} className="search-form">
+				<div className="input-section">
+					<input
+						type="text"
+						value={keyword}
+						onChange={handleChange}
+						placeholder="Search"
+					/>
+
+					<button>
+						<BiSearch />
+					</button>
+				</div>
+			</form>
+
+			<div className="dark-mode" onClick={handleDarkMode}>
+				<h2>
+					<VscColorMode />
+				</h2>
+			</div>
+		</div>
+	);
+};
 
 export default SearchBar;
