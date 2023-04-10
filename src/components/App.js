@@ -11,7 +11,7 @@ const App = () => {
 	const [videos, search] = useVideos('Figma');
 
 	useEffect(() => {
-		// setSelectedVideo(result[0]);
+		setSelectedVideo(videos[0]);
 	}, [videos]);
 
 	return (

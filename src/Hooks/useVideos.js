@@ -9,7 +9,7 @@ const useVideos = (defaultKeyword) => {
 
 	useEffect(() => {
 		search(defaultKeyword);
-	}, []);
+	}, [defaultKeyword]);
 
 	const search = async (keyword) => {
 		const result = await youtubeApi(keyword);
