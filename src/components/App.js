@@ -1,29 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import youtubeApi from '../Apis/youtubeApi';
+import React, { useState } from 'react';
+import useVideos from '../Hooks/useVideos';
 import CopyRight from './CopyRight';
 import SearchBar from './SearchBar';
 import VideoDetails from './VideoDetails';
 import VideoList from './VideoList';
 
 const App = () => {
-	const [videos, setVideos] = useState([]);
 	const [selectedVideo, setSelectedVideo] = useState(null);
 
-	useEffect(() => {
-		handleSearchSubmit('Figma');
-	}, []);
+	const [videos, search] = useVideos('Figma');
 
-	const handleSearchSubmit = async (keyword) => {
-		const result = await youtubeApi(keyword);
-
-		setVideos(result);
-		setSelectedVideo(result[0]);
-	};
+	// setSelectedVideo(result[0]);
 
 	return (
 		<>
 			<div>
-				<SearchBar onSubmit={handleSearchSubmit} />
+				<SearchBar onSubmit={search} />
 			</div>
 
 			<div className="main-display-comtainer">
