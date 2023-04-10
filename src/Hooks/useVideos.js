@@ -2,20 +2,22 @@
 // I will give you a list of -> outputs
 
 import { useEffect, useState } from 'react';
+import youtubeApi from '../Apis/youtubeApi';
 
-const useVideos = () => {
+const useVideos = (defaultKeyword) => {
 	const [videos, setVideos] = useState([]);
 
 	useEffect(() => {
-		handleSearchSubmit('Figma');
+		search(defaultKeyword);
 	}, []);
 
-	const handleSearchSubmit = async (keyword) => {
+	const search = async (keyword) => {
 		const result = await youtubeApi(keyword);
 
 		setVideos(result);
 	};
-	return;
+
+	return [videos, search];
 };
 
 export default useVideos;
