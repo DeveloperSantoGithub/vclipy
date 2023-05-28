@@ -13,7 +13,7 @@ function CopyRight() {
 						target="_blank"
 						rel="noreferrer"
 					>
-						Santo<span>.Pro</span>
+						santo.<span>pro</span>
 					</a>
 				</h2>
 			</div>
