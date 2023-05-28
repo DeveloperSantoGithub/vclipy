@@ -13,14 +13,14 @@ function CopyRight() {
 						target="_blank"
 						rel="noreferrer"
 					>
-						Developer<span>Santo.</span>
+						Santo<span>.Pro</span>
 					</a>
 				</h2>
 			</div>
 			<div className="links">
 				<a
 					className="github"
-					href="https://github.com/DeveloperSantoGithub"
+					href="https://github.com/SANTO-PRO"
 					target="_blank"
 					rel="noreferrer"
 				>
